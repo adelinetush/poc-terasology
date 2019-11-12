@@ -1,0 +1,33 @@
+.centered {
+  margin: auto;
+  width: 80%;
+  padding: 10px;
+}
+
+.modes {
+    margin: auto;
+}
+
+.modes-list {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding-bottom: 3%;
+}
+
+.modes-item {
+    color: gray;
+    font-size: .9rem;
+    text-decoration: none;
+    border-right:solid 2px white;
+    background-color: green;
+    padding: 10px 1px;
+    min-width: 40%;
+}
+
+.modes-header {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 2rem;
+}

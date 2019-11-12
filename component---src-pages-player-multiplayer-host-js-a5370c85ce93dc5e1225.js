@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{i1ts:function(e,n,t){"use strict";t.r(n);var a=t("q1tI"),r=t.n(a);n.default=function(){return r.a.createElement("div",null,r.a.createElement("hi",null,"Host your multiplayer game here"))}}}]);
+//# sourceMappingURL=component---src-pages-player-multiplayer-host-js-a5370c85ce93dc5e1225.js.map

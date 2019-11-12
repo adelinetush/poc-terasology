@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{YfS3:function(e,n,t){"use strict";t.r(n);var r=t("q1tI"),a=t.n(r);n.default=function(){return a.a.createElement("div",null,a.a.createElement("hi",null,"Join a server here"))}}}]);
+//# sourceMappingURL=component---src-pages-player-multiplayer-join-server-js-2d5b450dd01c20333fcc.js.map

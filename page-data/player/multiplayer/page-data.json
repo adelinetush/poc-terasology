@@ -1,1 +1,1 @@
-{"componentChunkName":"component---src-pages-player-multiplayer-js","path":"/player/multiplayer/","result":{"pageContext":{"isCreatedByStatefulCreatePages":true}}}
+{"componentChunkName":"component---src-pages-player-multiplayer-js","path":"/player/multiplayer/","result":{"data":{"allMarkdownRemark":{"edges":[{"node":{"frontmatter":{"title":"Host a server","date":"2019-11-14"},"fields":{"slug":"host-server"}}},{"node":{"frontmatter":{"title":"Join a server","date":"2019-11-13"},"fields":{"slug":"join-server"}}}]}},"pageContext":{"isCreatedByStatefulCreatePages":true}}}

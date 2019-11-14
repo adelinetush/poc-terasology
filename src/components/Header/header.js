@@ -1,17 +1,26 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link, graphql, useStaticQuery  } from 'gatsby'
 import { Row, Col } from 'reactstrap';
 
 import './header.scss'
 
 const Header = () => {
+    const data = useStaticQuery(graphql`
+        query {
+            site {
+                siteMetadata {
+                    title
+                }
+            }
+        }
+    `)
     return (
         <div className="container">
             <section className="section">
                 <Row>
                     <Col md="8">
                         <header className="header">
-                            <Link className="title" to="/">Terasology</Link>
+    <Link className="title" to="/">{data.site.siteMetadata.title}</Link>
                             <nav>
                                 <ul className="nav-list">
                                     <li className="nav-item">

@@ -1,11 +1,29 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { Row, Col } from 'reactstrap';
+import { graphql, useStaticQuery } from 'gatsby'
 
 import Layout from '../../components/Layout/layout'
-import GettingStarted from '../../components/GettingStarted/gettingStarted';
 
-const AboutPage = () => {
+const Multiplayer = () => {
+    const data = useStaticQuery(graphql`
+        query {
+            allMarkdownRemark {
+                edges {
+                    node {
+                        frontmatter {
+                            title
+                            date
+                        }
+                        fields{
+                            slug
+                        }
+                    }
+                }
+            }
+        }
+    `)
+    console.log(data);
     return (
         <Layout>
             <div className="container">
@@ -19,7 +37,7 @@ const AboutPage = () => {
                         <Col md="12" className="modes centered">
                             <ul className="modes-list">
                                 <li className="modes-item">
-                                    <a className="modes-header" href="https://github.com/Terasology/StructureTemplates">Multiplayer Template</a>
+                                    <a className="modes-header" href="https://github.com/MovingBlocks/Terasology/blob/develop/docs/Playing.md#multiplayer">Multiplayer Template</a>
                                 </li>
                             </ul>
                             <hr />
@@ -32,21 +50,25 @@ const AboutPage = () => {
                     </Row>
                     <Row>
                         <Col md="12" className="modes centered">
-                            <ul className="modes-list">
-                                <li className="modes-item">
-                                    <Link className="modes-header" to="/player/multiplayer/host">Host a Server</Link>
-                                </li>
-                                <li className="modes-item">
-                                    <Link className="modes-header" to="/player/multiplayer/join-server">Join a Server</Link>
-                                </li>
-                            </ul>
+                            <ol>
+                                {data.allMarkdownRemark.edges.map((edge) => {
+                                    return (
+                                        <li>
+                                            <Link to={`/player/multiplayer/${edge.node.fields.slug}`}>
+                                                <h2>{edge.node.frontmatter.title}</h2>
+                                                <p>{edge.node.frontmatter.date}</p>
+                                            </Link>
+                                        </li>
+                                    )
+                                })}
+                            </ol>
                             <hr />
                         </Col>
                     </Row>
                 </section>
-            </div >
+            </div>
         </Layout>
     )
 }
 
-export default AboutPage 
+export default Multiplayer 
